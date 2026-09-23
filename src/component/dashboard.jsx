@@ -30,7 +30,10 @@ function Dashboard() {
 			<header className="site-header">
 				<a className="brand" href="/" aria-label="Nusa kembali ke beranda"><span className="brand-mark">N</span><span>NUSA<span className="brand-dot">.</span></span></a>
 				<nav className="main-nav" aria-label="Navigasi utama"><a className="active" href="#berita">Berita</a><a href="#terpopuler">Terpopuler</a><a href="#tentang">Tentang kami</a></nav>
-				<button className="subscribe-button" type="button">Berlangganan</button>
+				<label className="header-search" aria-label="Cari berita di header">
+					<SearchIcon />
+					<input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Cari berita..." />
+				</label>
 			</header>
 			<section className="dashboard-intro" id="berita">
 				<div><p className="eyebrow">Rabu, 23 September 2026</p><h1>Berita hari ini,<br /><em>untuk kamu.</em></h1><p className="intro-copy">Ikuti kabar terbaru dari Indonesia dan dunia, dirangkum dengan jernih dan bermakna.</p></div>
